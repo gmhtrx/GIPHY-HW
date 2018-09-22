@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-
+    <link rel="stylesheet" href="assets/style.css">
     <title>GIPHY 2.0</title>
 </head>
 
@@ -23,19 +23,15 @@
         </div>
 
         <div class="row">
-            <div class="container float-left">
-            <div class="col" id="gifs">
-            </div>
-            </div>
-            <div class="col">
                 <div id="topic">
                     <form id="topic-form">
                         <label for="topic-input"> Add Topics: </label>
-                        <input type="text" id="topic-input"><br>
-                        <input id="add-topic" type="submit" value="Submit">
+                        <input type="text" id="topic-input">
+                        <input id="add-topic" class="btn-primary rounded" type="submit" value="Submit">
                     </form>
                 </div>
-            </div>
+        <div class="row" id="gifs">
+        </div>
 
         </div>
     </div>
@@ -60,7 +56,7 @@
                 for (var i = 0; i < results.length; i++) {
                     var x = $("<div>");
                     var p = $("<p>");
-                    p.html(results[i].rating);
+                    p.html("RATED: " + results[i].rating);
                     var y = $("<img>");
                     y.addClass("pictures");
                     y.attr("src", results[i].images.fixed_height_still.url);
